@@ -1,0 +1,68 @@
+
+
+Admin can increase and decrease user cryptocurrency balance.
+Admin can see all total balance of all cryptocurrency.
+Admin can add other cryptocurrency such XRP, EOS, XLM to wallet.
+Admin can manage exchange rate between cryptocurrency.
+User can transfer same cryptocurrency to other.
+
+get  /admin/getTotalBalnace
+    response {
+        btc:500
+        eth:200
+    }
+put /admin/
+    body {
+        symbol:
+        type: increase,decrease
+        amout:
+    }
+
+post /admin/add
+    body{
+        symbol: 
+    }
+
+put admin/rate 
+    body {
+        symbol:
+        rate:
+    }
+ 
+put /transfer 
+    body { 
+        user:
+        your_symbol: 
+        des_symbol: 
+    }
+     
+    
+
+
+table users
+-----
+id username 
+    admin   
+    UserA   
+    UserB 
+
+
+table wallets
+
+id_user  symbol amout
+1        btc     3
+1        eth     4 
+2        btc     2
+
+
+table symbols
+-----
+symbol  amout 
+
+
+
+table rate  
+-----
+symbol rate 
+btc/eth
+
